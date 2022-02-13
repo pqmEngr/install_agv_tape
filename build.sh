@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-catkin_make
+cd ~/catkin_ws/ && catkin_make
+
