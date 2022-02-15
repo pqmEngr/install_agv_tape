@@ -3,7 +3,7 @@
 ![Build Status](https://img.shields.io/wheelmap/a/26699541?color=red&label=AGV_tape)
 
 
-Hoàn thiện AGV_tape gồm 3 giai đoạn (Stage):
+## Overview
 - Stage-1: Cài đặt phần mềm bao gồm các package và library liên quan cho hệ thống và arduino 
 - Stage-2: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
 - Stage-3: Hoàn thiện
