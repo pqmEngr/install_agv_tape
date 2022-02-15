@@ -2,7 +2,8 @@
 ![Build Status](https://img.shields.io/opencollective/backers/minh?color=red&label=MKAC)
 ![Build Status](https://img.shields.io/wheelmap/a/26699541?color=red&label=AGV_tape)
 
-Dự án được phát triển qua 4 giai doạn  :
+
+:
 - Phase-1: Installation of ROS and V-REP
 - Phase-2: Implementation of A* on a non-holonomic robot
 - Phase-3: Implementation of A* on a differential-drive robot
