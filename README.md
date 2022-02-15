@@ -8,7 +8,7 @@ Hoàn thiện AGV_tape gồm 3 giai đoạn (Stage):
 - Stage-2: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
 - Stage-3: Hoàn thiện
 
-Stage 1 và 2 bạn có thể tìm kiếm source tại mã nguồn của [MKAC](https://gitlab.com/mkac-agv/magnetic_agv).
+Bạn có thể tìm kiếm source tại mã nguồn của [MKAC](https://gitlab.com/mkac-agv/magnetic_agv).
 
 ## Dependencies
 
