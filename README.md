@@ -3,13 +3,13 @@
 ![Build Status](https://img.shields.io/wheelmap/a/26699541?color=red&label=AGV_tape)
 
 
-:
-- Phase-1: Installation of ROS and V-REP
-- Phase-2: Implementation of A* on a non-holonomic robot
-- Phase-3: Implementation of A* on a differential-drive robot
-- Phase-4: Implementation of A* on Turtlebot using ROS
+Hoàn thiện AGV_tape gồm 4 giai đoạn (Stage):
+- Stage-1: Cài đặt phần mềm bao gồm các package và library liên quan cho hệ thống và arduino 
+- Stage-2: ............................
+- Stage-3: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
+- Stage-4: Hoàn thiện
 
-Phases 1 and 2 have been implemented on another [repository](https://github.com/urastogi885/a-star-robot). A sample output for phase-3 of the project can be found [here](https://github.com/urastogi885/a-star-turtlebot#phase3-output)
+Stage 1 và 2 bạn có thể tìm kiếm source tại mã nguồn của MKAC  [MKAC](https://github.com/urastogi885/a-star-robot). A sample output for phase-3 of the project can be found [here](https://github.com/urastogi885/a-star-turtlebot#phase3-output)
 
 ## Authors
 
