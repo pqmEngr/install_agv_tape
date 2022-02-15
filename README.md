@@ -4,68 +4,55 @@
 
 
 ## Overview
-- Stage-1: Cài đặt phần mềm bao gồm các package và library liên quan cho hệ thống và arduino 
-- Stage-2: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
-- Stage-3: Hoàn thiện
+- Stage-1: install software include Packages and Library for AGV magnetic tape (consists of Arduino)
+- Stage-2: Testing hardware and simulation
 
-Bạn có thể tìm kiếm source tại mã nguồn của [MKAC](https://gitlab.com/mkac-agv/magnetic_agv).
+You can find the source code made at [MKAC](https://gitlab.com/mkac-agv/magnetic_agv).
 
 ## Dependencies
-
 - Ubuntu 18.04
 - ROS Melodic
+- ROS Arduino
 
 ## Install Dependencies
+- Open the terminal with Ctrl+Alt+T and go to your workspace usually and enter below commands one at a time
+  
+```
+cd .. 
+cd ~/catkin_ws/src
+```
+Please refer to the script file.
+- Install magnetic_agv, agv_tape_arduino, agv_tape_config and the necessary libraries (path_creator, agv_common_library, agv_msgs)
+  
+```
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/pqmEngr/Install_Agv_Tape.git
+cd Install_Agv_Tape
+sudo chmod +x install_all.sh
+./install_all.sh
+cd ~/catkin_ws/ && catkin_make
+```
+we have tried to keep the libraries on the PC running successfully AGV
 
-- Install Python3, Python3-tk, and the necessary libraries: (if not already installed)
-
+- Install related libraries
 ```
-sudo apt install python3 python3-tk
-sudo apt install python3-pip
-pip3 install numpy opencv-python
+pip install pipreqs
+pip install -r requirements.txt
 ```
+Check if your system successfully installed all the library, if the above installation fails. 
 
-- Check if your system successfully installed all the dependencies
-- Open terminal using Ctrl+Alt+T and enter python3.
-- The terminal should now present a new area represented by >>> to enter python commands
-- Now use the following commands to check libraries: (Exit python window using Ctrl+Z if an error pops up while running 
-the below commands)
+Please check the versions in the requirements.txt file to see if they are supported and an alternate version for it or contact MKAC
 
+- Install ROS Ardruino
 ```
-import tkinter
-import numpy
-import cv2
-import math
-import queue
+cd .. 
+cd Arduino/libraries
+rm -rf ros_lib
+rosrun rosserial_arduino make_libraries.py .
 ```
 
-- If you want to work on Ubuntu 16.04, you will need to install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
-by following the instructions given on referenced web-page.
-- If you want to work on Ubuntu 18.04, you will need to install [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
-by following the instructions given on referenced web-page.
-- We recommend installing the full-desktop version of ROS because it automatically installs the latest compatible version of
-Gazebo on your system.
-- If you wish to install Gazebo separately, then follow the instruction on the [Gazebo install page](http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install).
-- Install Turtlebot-3 package and its dependencies:
-```
-cd ~/<ROS_Workspace>/src
-git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
-git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
-git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-cd  ../ && catkin_make
-sudo su
-cp -r src/turtlebot3/ /opt/ros/<distro>/share/
-cp -r src/turtlebot3_msgs/ /opt/ros/<distro>/share/
-cp -r src/turtlebot3_simulations/ /opt/ros/<distro>/share/
-```
-- Using the same terminal window, check installation of turtlebot3:
-```
-source devel/setup.bash
-roslaunch turtlebot3_gazebo turtlebot3_world.launch
-```
-- Note that Turtlebot-3 package is supported by ROS Melodic as well as Kinetic.
-
-## Phase3 Output
+## Run simulation and Testing 
 
 In phase-3, a video output was generated to show the exploration and final path a differential-drive robot might take 
 using the OpenCV library. The output for one case is presented below.
@@ -75,48 +62,4 @@ using the OpenCV library. The output for one case is presented below.
   <br><b>Figure 2 - Exploration of a differential-drive robot using A* to find optimal path from start to goal</b><br>
 </p>
  
-## Run Instructions
 
-- Clone the repository in your ROS workspace. Type
-```
-cd ~/<ROS_Workspace>/src
-git clone https://github.com/urastogi885/a-star-turtlebot
-```
-
-- If you have a compressed version of the project, extract it, go into project directory, open the terminal, and type:
-
-```
-python3 a_star_turtlebot.py start_x,start_y,start_orientation goal_x,goal_y rpm1,rpm2,clearance animation
-python3 a_star_turtlebot.py -4,-4.5,0 4.25,2.75 30,25,5 0
-```
-
-- This would generate a text file that will be used to run the Turtlebot-3 in Gazebo.
-- Note the following to try the code with other inputs:
-    - The origin of the map is taken at the center of the map s make sure to take into consideration in which 
-    quadrant your points lie.
-    - Provide start and goal coordinates in meters while start orientation is to be provided in degrees.
-    - In addition to that, clearance is taken in centimeters.
-    - Refer documentation of [*a_star_turtlebot.py*](https://github.com/urastogi885/a-star-turtlebot/blob/master/a_star_turtlebot.py) to
-    understand further about input arguments.
-    - Set animation to 1 to generate an exploration output as shown in [Phase3 Output](https://github.com/urastogi885/a-star-turtlebot#phase3-output).
-    Note that this drastically increases exploration time. 
-- Launch the world, spawn turtlebot, navigate it to the desired goal point. Type:
-
-```
-cd ~/<ROS_Workspace>
-source devel/setup.bash
-catkin_make or catkin build (For ROS Melodic, you might have to use catkin build instead of catkin_make)
-roslaunch a-star-turtlebot launcher_1.launch
-```
-
-- Stop the execution, using ```Ctrl + C```. Do not close this terminal.
-- Open *planner.py* from the scripts folder, replace *commander_1.txt* by *commander_2.txt* in the main section of the file.
-- Essentially, the following line needs to be changed in *planner.py*:
-```
-with open(ros_root.get_path('a-star-turtlebot') + '/output_files/commander_1.txt', 'r') as command:
-```
-
-- From the same terminal, run:
-```
-roslaunch a-star-turtlebot launcher_2.launch
-```
