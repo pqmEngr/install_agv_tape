@@ -1,8 +1,7 @@
-# Quick Install AGV_Tape 
-[![Build Status](https://img.shields.io/opencollective/backers/minh?color=red&label=MKAC)](https://travis-ci.org/urastogi885/a-star-turtlebot)
-[![Build Status](https://travis-ci.org/urastogi885/a-star-turtlebot.svg?branch=master)](https://travis-ci.org/urastogi885/a-star-turtlebot)
+# Installation Documentation
+[![Build Status](https://img.shields.io/opencollective/backers/minh?color=red&label=MKAC)]
+[![Build Status](https://img.shields.io/wheelmap/a/26699541?color=red&label=AGV_tape)]
 
-<<<<<<< HEAD
 Dự án được phát triển qua 4 giai doạn  :
 - Phase-1: Installation of ROS and V-REP
 - Phase-2: Implementation of A* on a non-holonomic robot
