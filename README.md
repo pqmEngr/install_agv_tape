@@ -3,30 +3,17 @@
 ![Build Status](https://img.shields.io/wheelmap/a/26699541?color=red&label=AGV_tape)
 
 
-Hoàn thiện AGV_tape gồm 4 giai đoạn (Stage):
+Hoàn thiện AGV_tape gồm 3 giai đoạn (Stage):
 - Stage-1: Cài đặt phần mềm bao gồm các package và library liên quan cho hệ thống và arduino 
-- Stage-2: ............................
-- Stage-3: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
-- Stage-4: Hoàn thiện
+- Stage-2: Testing (Kiếm tra lại IO arduino và Simulation Agv_Tape )
+- Stage-3: Hoàn thiện
 
-Stage 1 và 2 bạn có thể tìm kiếm source tại mã nguồn của MKAC  [MKAC](https://github.com/urastogi885/a-star-robot). A sample output for phase-3 of the project can be found [here](https://github.com/urastogi885/a-star-turtlebot#phase3-output)
-
-## Authors
-
-- [Umang Rastogi](https://github.com/urastogi885)
-- [Naman Gupta](https://github.com/namangupta98)
-
-## Todo
-
-- Add path smoothing
+Stage 1 và 2 bạn có thể tìm kiếm source tại mã nguồn của [MKAC](https://gitlab.com/mkac-agv/magnetic_agv).
 
 ## Dependencies
 
-- Ubuntu 16.04/18.04
-- ROS Kinetic/Melodic
-- Gazebo
-- Turtlebot3 Packages
-- Python Packages: Numpy, OpenCV-Python, Math, Queue
+- Ubuntu 18.04
+- ROS Melodic
 
 ## Install Dependencies
 
