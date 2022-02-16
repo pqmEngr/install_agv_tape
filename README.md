@@ -52,14 +52,16 @@ rm -rf ros_lib
 rosrun rosserial_arduino make_libraries.py .
 ```
 
-## Run simulation and Testing 
-
-In phase-3, a video output was generated to show the exploration and final path a differential-drive robot might take 
-using the OpenCV library. The output for one case is presented below.
-
+## Simulation
+- Run program Dashborad with (-s true is simulation)
+```
+rosrun agv_ui dashboard.py
+rosrun agv_ui dashboard.py -s true
+```
 <p align="center">
-  <img src="https://github.com/urastogi885/a-star-turtlebot/blob/master/images/phase3.gif">
-  <br><b>Figure 2 - Exploration of a differential-drive robot using A* to find optimal path from start to goal</b><br>
+  
+  <img src="hhttps://user-images.githubusercontent.com/82381342/154178893-ad5fe69a-6395-4d5f-a9b9-b6f9868771df.png">
+  <br><b>Figure 2 - Dashboard AGV TAPE</b><br>
 </p>
  
 
