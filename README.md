@@ -52,13 +52,9 @@ rm -rf ros_lib
 rosrun rosserial_arduino make_libraries.py .
 ```
 
-## Simulation
+## Program and Simulation
 
-<p align="center">
-  
-  <img src="https://user-images.githubusercontent.com/82381342/154178893-ad5fe69a-6395-4d5f-a9b9-b6f9868771df.png">
-  <br><b>Figure - Dashboard AGV TAPE</b><br>
-</p>
+Running the following commands, if successful, dashborad interface is successful
 
 - Run Dashborad 
 ```
@@ -70,3 +66,9 @@ rosrun agv_ui dashboard.py -s true
 roslaunch agv_bringup agv_magnetic.launch subfix:=.py
 roslaunch agv_bringup agv_magnetic.launch simulation:=true subfix:=.py
 ```
+
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/82381342/154178893-ad5fe69a-6395-4d5f-a9b9-b6f9868771df.png">
+  <br><b>Figure - Dashboard AGV TAPE</b><br>
+</p>
