@@ -61,14 +61,15 @@ Running the following commands, if successful, dashborad interface is successful
 rosrun agv_ui dashboard.py
 rosrun agv_ui dashboard.py -s true
 ```
-- Run program
-```
-roslaunch agv_bringup agv_magnetic.launch subfix:=.py
-roslaunch agv_bringup agv_magnetic.launch simulation:=true subfix:=.py
-```
 
 <p align="center">
   
   <img src="https://user-images.githubusercontent.com/82381342/154178893-ad5fe69a-6395-4d5f-a9b9-b6f9868771df.png">
   <br><b>Figure - Dashboard AGV TAPE</b><br>
 </p>
+
+- Run program
+```
+roslaunch agv_bringup agv_magnetic.launch subfix:=.py
+roslaunch agv_bringup agv_magnetic.launch simulation:=true subfix:=.py
+```
