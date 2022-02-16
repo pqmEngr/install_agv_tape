@@ -61,7 +61,7 @@ rosrun agv_ui dashboard.py -s true
 <p align="center">
   
   <img src="https://user-images.githubusercontent.com/82381342/154178893-ad5fe69a-6395-4d5f-a9b9-b6f9868771df.png">
-  <br><b>Figure 2 - Dashboard AGV TAPE</b><br>
+  <br><b>Figure - Dashboard AGV TAPE</b><br>
 </p>
  
 
