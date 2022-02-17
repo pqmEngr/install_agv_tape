@@ -46,10 +46,8 @@ Please check the versions in the requirements.txt file to see if they are suppor
 
 - Install ROS Ardruino
 ```
-cd .. 
-cd Arduino/libraries
-rm -rf ros_lib
-rosrun rosserial_arduino make_libraries.py .
+sudo chmod +x install_arduino.sh
+./install_arduino.sh
 ```
 
 ## Program and Simulation
