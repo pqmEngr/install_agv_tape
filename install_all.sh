@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+cd ..
 git clone git@gitlab.com:mkac-agv/agv_msgs.git
 git clone git@gitlab.com:mkac-agv/agv_tape_arduino.git -b agv_lidar_test
 git clone git@gitlab.com:mkac-agv/agv_tape_config.git -b agv_lidar_test
