@@ -71,3 +71,10 @@ rosrun agv_ui dashboard.py -s true
 roslaunch agv_bringup agv_magnetic.launch subfix:=.py
 roslaunch agv_bringup agv_magnetic.launch simulation:=true subfix:=.py
 ```
+
+- Password login 
+user: 15 
+ps: 19001900 
+and 
+user: 6 
+password: 6
